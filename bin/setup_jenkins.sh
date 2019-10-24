@@ -42,7 +42,7 @@ oc new-build  -D $'FROM docker.io/openshift/jenkins-agent-maven-35-centos7:v3.11
 echo "apiVersion: v1
 items:
 - kind: "BuildConfig"
-  apiVersion: "v1"
+  apiVersion: "build.openshift.io/v1"
   metadata:
     name: "tasks-pipeline"
   spec:
