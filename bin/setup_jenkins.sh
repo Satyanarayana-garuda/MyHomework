@@ -49,7 +49,7 @@ items:
     source:
       type: "Git"
       git:
-        uri: ${REPO}
+        uri: "${REPO}"
       contextDir: "openshift-tasks"
     strategy:
       type: "JenkinsPipeline"
@@ -57,11 +57,11 @@ items:
         jenkinsfilePath: Jenkinsfile
         env:
         - name: "GUID"
-          value: ${GUID}
+          value: "${GUID}"
         - name: "REPO"
-          value: ${REPO}
+          value: "${REPO}"
         - name: "CLUSTER"
-          value: ${CLUSTER}
+          value: "${CLUSTER}"
     triggers: []
 kind: List
 metadata: []" | oc create -f - -n ${GUID}-jenkins
